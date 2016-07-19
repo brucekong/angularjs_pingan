@@ -1,5 +1,5 @@
 define(['app'], function(app){
-      
+
    return app.controller('lcxqCtrl', ['$scope','$rootScope','$http', function ($scope,$rootScope,$http) {
 
             $rootScope.headTitle = $rootScope.title = "产品详情";
@@ -8,7 +8,7 @@ define(['app'], function(app){
 
             $http.get('./json/lcxq.json').
               success(function(data) {
-                
+
                 $scope.lc = data;
 
               });
